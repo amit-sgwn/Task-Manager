@@ -7,14 +7,144 @@
     android:fitsSystemWindows="true"
     tools:context="com.taskmanager.sangwan.taskmanager.Add_Task"
     android:weightSum="1"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:background="@color/dim_foreground_material_dark"
+    android:baselineAligned="false">
 
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:text="New CheckBox"
-        android:id="@+id/checkBox"
-        android:layout_gravity="bottom"
-        android:layout_weight="0.23" />
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Task Information"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/textView2" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.02">
+
+        <EditText
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="Task ID" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:layout_weight="1"
+            android:hint="Subject" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:hint="Start Date" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_gravity="right"
+            android:hint="End Date" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="177dp"
+            android:text="Detail"
+            android:id="@+id/data" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.21"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highest Priority"
+            android:id="@+id/radioButton" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Priority"
+            android:id="@+id/radioButton2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lowest Priority"
+            android:id="@+id/radioButton3" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/checkBox"
+            android:layout_weight="0.54" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:id="@+id/checkBox2"
+            android:layout_weight="0.55" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/button4"
+            android:layout_weight=".5" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Discard"
+            android:id="@+id/button3"
+            android:layout_weight=".5" />
+    </LinearLayout>
+
 </LinearLayout>
