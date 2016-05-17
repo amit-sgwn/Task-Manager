@@ -8,8 +8,12 @@
     tools:context="com.taskmanager.sangwan.taskmanager.Add_Task"
     android:weightSum="1"
     android:orientation="vertical"
-    android:background="@color/dim_foreground_material_dark"
-    android:baselineAligned="false">
+    android:background="@color/design_textinput_error_color_dark"
+    android:baselineAligned="false"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
 
 
     <TextView
@@ -137,14 +141,16 @@
             android:layout_height="wrap_content"
             android:text="Save"
             android:id="@+id/button4"
-            android:layout_weight=".5" />
+            android:layout_weight=".5"
+            android:background="@color/accent_material_dark" />
 
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="Discard"
             android:id="@+id/button3"
-            android:layout_weight=".5" />
+            android:layout_weight="0.33"
+            android:background="@color/accent_material_dark" />
     </LinearLayout>
 
 </LinearLayout>
