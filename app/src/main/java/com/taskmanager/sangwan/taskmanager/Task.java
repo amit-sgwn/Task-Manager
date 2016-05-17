@@ -13,7 +13,7 @@ public class Task {
     private String priority;
 
     public Task(int id, String data, String sub, String start_date, String end_date, String status, String priority) {
-        this.id = id;
+
         this.data = data;
         subject = sub;
         this.start_date = start_date;
@@ -21,7 +21,9 @@ public class Task {
         this.status = status;
         this.priority = priority;
     }
+    public Task(){
 
+    }
     public int getId() {
         return id;
     }

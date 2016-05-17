@@ -17,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent();
-
+                addTask();
             }
         });
         view.setOnClickListener(new View.OnClickListener() {
@@ -28,4 +27,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void addTask() {
+        Intent in = new Intent(MainActivity.this,Add_Task.class);
+        startActivity(in);
+    }
+
+
 }
