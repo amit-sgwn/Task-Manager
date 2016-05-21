@@ -4,12 +4,12 @@ package com.taskmanager.sangwan.taskmanager;
  * Created by Amit Sangwan on 14-05-2016.
  */
 public class Task {
-    private int id;
+    private int id=0;
     private String data;
     private String subject;
     private String start_date;
     private String end_date;
-    private String status;
+    private String status="Not Done";
     private String priority;
 
     public Task(int id, String data, String sub, String start_date, String end_date, String status, String priority) {

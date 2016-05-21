@@ -1,6 +1,8 @@
 package com.taskmanager.sangwan.taskmanager;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -30,6 +32,18 @@ public class DataBase {
         this.ourContext = ourContext;
     }
 
+    public long createEntry(Task myTask) {
+        ContentValues cv = new ContentValues();
+        cv.put(KEY_DATA,myTask.getData());
+        cv.put(KEY_PRIO,myTask.getPriority());
+        cv.put(KEY_STARTDATE,myTask.getStart_date());
+        cv.put(KEY_ENDDATE,myTask.getEnd_date());
+        cv.put(KEY_SUB,myTask.getSubject());
+        cv.put(KEY_STATUS,myTask.getStatus());
+
+        return MyDataBase.insert(DATABASE_TABLE,null,cv);
+    }
+
     public static class DBHelper extends SQLiteOpenHelper {
 
         public DBHelper(Context context) {
@@ -52,7 +66,7 @@ public class DataBase {
             onCreate(db);
         }
     }
-    public  DataBase open(){
+    public  DataBase open() throws SQLException{
         myHelper = new DBHelper(ourContext);
         MyDataBase = myHelper.getWritableDatabase();
         return this;

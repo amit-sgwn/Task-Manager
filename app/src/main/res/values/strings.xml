@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TaskManager</string>
     <string name="title_activity_add__task">Add_Task</string>
+    <string name="title_activity_view_">View_Activity</string>
+    <string name="title_activity_detail_">Detail_Activity</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -18,7 +18,25 @@
         <activity
             android:name=".Add_Task"
             android:label="@string/title_activity_add__task"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".View_Activity"
+            android:label="@string/title_activity_view_"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.taskmanager.sangwan.taskmanager.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Detail_Activity"
+            android:label="@string/title_activity_detail_"
+            android:parentActivityName=".View_Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.taskmanager.sangwan.taskmanager.View_Activity" />
+        </activity>
     </application>
 
 </manifest>
